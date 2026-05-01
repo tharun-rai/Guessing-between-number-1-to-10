@@ -1,27 +1,17 @@
-#include<stdio.h>
-int main()
-{
-    int g,i,n;
-    printf("The number btw 1 to 10:");
-    scanf("%d",&n);
-    for(i=1;i<=5;i++)
-    {
-      printf("What's your guess:\n");
-      scanf("%d",&g);
-      {
-          if(g<n)
-          printf("\tNumber is too low\n");
-          else if(g==n)
-          {
-          printf("\tGood job!You have won\n");
-          break;
-          }
-          else
-          printf("\tNumber is too high\n");
-      }
-}
-if(i>5)
-printf("\'You lose,try again.\'");
-else
-printf("");
-}
+import random
+
+number = random.randint(1, 100)
+
+guess = None
+
+print(" Guess the number between 1 and 100")
+
+while guess != number:
+    guess = int(input("Enter your guess: "))
+
+    if guess < number:
+        print("Too low! Try again.")
+    elif guess > number:
+        print("Too high! Try again.")
+    else:
+        print("Correct! You guessed the number!")
